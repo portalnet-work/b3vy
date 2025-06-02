@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta data and asset preloading -->
+    <meta charset="utf-8" />
+    <!-- Preload the portal logo image for faster display -->
+    <link
+      rel="preload"
+      href="assets/images/portalLogo.png"
+      as="image"
+      fetchpriority="high"
+    />
+    <!-- Page title -->
+    <title>Home | Portal</title>
+    <!-- Responsive meta tag for mobile devices -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <!-- Set the page's language -->
+    <meta http-equiv="Content-Language" content="en" />
+    <!-- SEO meta tags -->
+    <meta
+      name="description"
+      content="A Borderless Discord Network of Communities"
+    />
+    <meta
+      name="og:description"
+      content="A Borderless Discord Network of Communities"
+    />
+    <meta name="og:title" content="Home | portalBot" />
+    <meta name="og:image" content="assets/images/portalLogo.png" />
+    <meta property="og:site_name" content="portalBot" />
+    <meta name="theme-color" content="#2291a0" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="300x250"
+      href="/assets/images/portalLogo.png"
+    />
+    <!-- External stylesheets and fonts -->
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Alfa+Slab+One"
+    />
+    <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="/assets/fonts/ionicons.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+
+  <body style="background-color: var(--background)">
+    <!-- Top navigation bar container -->
+      <!-- Navigation bar with fixed positioning -->
+      <nav
+        class="navbar navbar-collapse nowrap navbar-dark navbar-expand-lg sticky-top"
+        style="
+          left: 0;
+          right: 0;
+          color: var(--main-color);
+          border-top-width: 6px;
+          border-top-style: solid;
+          background: var(--background);
+        "
+      >
+          <a
+            class="navbar-brand"
+            href="/"
+            style="
+              color: var(--main-color);
+              font-family: 'Alfa Slab One', cursive;
+            "
+          >
+            portalNetwork
+
+          </a>
+          <button class="bg-dark navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+          </button>
+        <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+          <!-- Collapsible part of the navbar -->
+              <!-- Link to the features section -->
+              <li class="nav-item active">
+                <a
+                  class="nav-link active smoothScroll"
+                  href="/features"
+                  style="color: var(--text-color)"
+                  >Features</a>
+              </li>
+              <!-- Link to add the bot to Discord -->
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="/commands"
+                  style="color: var(--text-color)"
+                  >Commands</a
+                >
+              </li>
+              <!-- Link to the support page -->
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="/support/"
+                  style="color: var(--text-color)"
+                  >Support</a
+                >
+              </li>
+	  </ul>
+          <!-- Nav Bar Side buttons -->
+          <div class="d-flex ml-auto">
+            <a
+            href="/premium"
+            class="btn btn-primary shadow-none"
+            style="margin-left: 10px; 
+            border-color: rgba(255, 195, 79, 0.8); 
+            background-color: rgba(255, 195, 79, 0.3); 
+            border: none;
+            transition: background-color 0.3s ease;
+            color: white; /* Ensure text remains fully visible */
+            border-radius: 10px;"
+          >
+          👑Premium
+          </a>
+            <a
+              href="#login"
+              id="login"
+              class="btn btn-primary shadow-none"
+              type="button"
+              style="margin-left: 10px; 
+              background-color: rgba(114, 137, 218, 1); /* Adjust last value (0.7) for opacity */
+              border-color: rgba(0, 123, 255, 0.7);
+              border: none;
+              transition: background-color 0.3s ease;
+              border-color: var(--main-color);
+              color: white; /* Ensure text remains fully visible */
+              border-radius: 10px;"
+            >
+              Login to Discord
+            </a>
+          </div>
+        </div>
+      </nav>
+
+
+    <main id="main" class="text-light pt-4 features-boxed row justify-content-center" style="background: var(--secondary)">
+      <form method="post" id="form">
+      	<div class="form-group">
+            <label class="form-label" for="name">Server Name</label>
+            <input minlength=1 maxlength=25 class="form-control" name="name" id="name" type="text"></input>
+      	</div>
+              <!--Your current server name is: **${answers.name}**\nWould you like to keep this name? Type \`yes\` to keep it or provide a new name.`</>
+                answers.name = msg.trim();
+              }
+            },
+          },
+          {
+          -->
+      	<div class="form-group">
+            <label class="form-label" for="description">Server Description</label>
+            <textarea minlength=25 maxlength=140 class="form-control" name="description" id="description" rows="3" ></textarea>
+         </div>
+            <!--
+              "Please provide a description for your server (25-140 characters).",
+            process: (msg) => {
+              if (msg.length < 25) {
+                throw new Error(
+                  "Description too short. Please provide more detail."
+                );
+              }
+              if (msg.length > 140) {
+                throw new Error(
+                  "Description too long. Please keep it under 140 characters."
+                );
+              }
+              answers.description = msg.trim();
+            },
+          },
+          -->
+      	<div class="form-group" id="tags-container">
+          <label class="form-label" for="tags">Tags</label>
+          <input type="search" class="form-control" name="tags" id="tags">
+          </input>
+         </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </main>
+
+    <!-- Decorative section with an SVG curve transition -->
+    <div style="background-color: var(--background)">
+      <div style="height: 150px; overflow: hidden">
+        <svg
+          viewBox="0 0 500 150"
+          preserveAspectRatio="none"
+          style="height: 100%; width: 100%"
+        >
+          <path
+            d="M-41.53,-9.56 C167.83,173.98 302.14,-60.89 534.09,89.10 L500.00,0.00 L0.00,0.00 Z"
+            style="stroke: none; fill: var(--secondary)"
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Decorative SVG wave at the bottom of the page -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="var(--secondary)"
+        fill-opacity="1"
+        d="M0,160L48,154.7C96,149,192,139,288,154.7C384,171,480,213,576,218.7C672,224,768,192,864,181.3C960,171,1056,181,1152,192C1248,203,1344,213,1392,218.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+      ></path>
+    </svg>
+
+    <!-- Footer section -->
+    <div class="footer-dark">
+      <div class="row">
+        <!-- Back-to-top button -->
+        <div class="col item social">
+          <a class="smoothScroll" href="#top">
+            <i class="icon ion-android-arrow-up"></i>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <!-- Copyright and ownership -->
+          <p class="copyright" style="color: var(--text-color)">
+            Own and operated by the devEco © 2025
+          </p>
+          <!-- Credits to developers -->
+          <p class="developed-by" style="color: var(--text-color)">
+            Credits
+            <a
+              href="https://discordapp.com/users/691506668781174824"
+              style="color: var(--main-color)"
+              >Sdriver1</a
+            >
+            <a
+              href="https://jer.cx"
+              style="color: var(--main-color)"
+              >| JeremyBobbin</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <!-- Footer links for GitHub, support, social media, etc. -->
+        <div class="footer-links" style="padding: 20px">
+          <!-- GitHub link -->
+          <a
+            href=" https://github.com/thedeveco"
+            class="footer-link-item"
+            style="
+              color: var(--text-color);
+              margin-right: 20px;
+              text-decoration: none;
+            "
+          >
+            <i
+              class="fa fa-github"
+              aria-hidden="true"
+              style="font-size: 24px; vertical-align: middle"
+            ></i>
+            <span style="vertical-align: middle">GitHub</span>
+          </a>
+          <!-- Support Server link -->
+          <a
+            href="https://discord.gg/u4uYe3pCRp"
+            class="footer-link-item"
+            style="
+              color: var(--text-color);
+              margin-right: 0px;
+              text-decoration: none;
+            "
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=YmmZ2YsHiv59&format=png&color=FFFFFF"
+              alt="Wumpus Store Icon"
+              style="width: 24px; height: auto; vertical-align: middle"
+            />
+            <span style="vertical-align: middle">Support Server</span>
+          </a>
+
+          <div class="link-divider"></div>
+          <!-- LinkedIn link -->
+          <a
+            href="https://www.linkedin.com/company/thedeveco/"
+            class="footer-link-item"
+            style="
+              color: var(--text-color);
+              margin-right: 20px;
+              text-decoration: none;
+            "
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=8808&format=png&color=FFFFFF"
+              alt="LinkedIn Icon"
+              style="width: 24px; height: auto; vertical-align: middle"
+            />
+            <span style="vertical-align: middle">LinkedIn</span>
+          </a>
+          <!-- Youtube link -->
+          <a
+            href="https://youtube.com/@thedeveco"
+            class="footer-link-item"
+            style="
+              color: var(--text-color);
+              margin-right: 20px;
+              text-decoration: none;
+            "
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=37326&format=png&color=FFFFFF"
+              alt="Youtube Icon"
+              style="width: 24px; height: auto; vertical-align: middle"
+            />
+            <span style="vertical-align: middle">Youtube</span>
+          </a>
+          <!-- Instagram link -->
+          <a
+            href="https://instagram.com/thedev.eco"
+            class="footer-link-item"
+            style="
+              color: var(--text-color);
+              margin-right: 0px;
+              text-decoration: none;
+            "
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=32292&format=png&color=FFFFFF"
+              alt="Insta Icon"
+              style="width: 24px; height: auto; vertical-align: middle"
+            />
+            <span style="vertical-align: middle">Instagram</span>
+          </a>
+          <div class="link-divider"></div>
+          <!-- Legal information link -->
+          <a
+            href="https://portalnet.work/listing"
+            class="footer-link-item"
+            style="
+              color: var(--text-color);
+              margin-right: 20px;
+              text-decoration: none;
+            "
+          >
+            <span style="vertical-align: middle">Legal</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript files loaded at the end of the document for improved performance -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/Counting.js"></script>
+    <script src="/assets/js/untitled.js"></script>
+    <script src="/assets/js/botstats.js"></script>
+    <script src="/assets/js/commands.js"></script>
+    <script src="/assets/js/discord-oauth.js"></script>
+    <script src="/assets/js/promote.js"></script>
+  </body>
+</html>
